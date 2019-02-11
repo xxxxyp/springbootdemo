@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document page</title>
+</head>
+<body>
+
+<p>this is a test page for ducoment</p>
+<!--<p1 id = 'title' >这是一个段落</p1>-->
+<script>
+    document.write("<h1>这是一个标题</h1>");
+    document.write("<p1 id = 'title' >这是一个段落</p1>");
+
+    function changeTitle() {
+        document.getElementById("title").innerHTML= "my first javascript function";
+
+    }
+    function changeTime() {
+        document.getElementById("title").innerHTML= Date();
+        console.log(5+"6");
+    }
+    function logArray() {
+        var carArray = new Array('宝马','路虎','奔驰');
+        console.log(carArray);
+    }
+    function logObject() {
+        var carInfo = {
+            name:"宝马",
+            price:10e5,
+            start:function () {
+                return name+price;
+            }
+        };
+        console.log(carInfo);
+        console.log(carInfo.start);
+    }
+</script>
+
+<button type="button" onclick="changeTitle()">changeTitle</button>
+<br>
+<button type="button" onclick="changeTime()">changeTime</button>
+<br>
+<button type="button" onclick="logArray()">testArray</button>
+<br>
+<button type="button" onclick="logObject()">testObject</button>
+</body>
+</html>

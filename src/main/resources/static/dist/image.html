@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>image</title>
+</head>
+<body>
+
+<script>
+    
+    function changeImage() {
+        var elment = document.getElementById("myimage");
+        if (elment.src.match("bulboff")) {
+            elment.src = "../image/pic_bulbon.gif";
+        } else {
+            elment.src = "../image/pic_bulboff.gif"
+        }
+        
+    }
+    
+</script>
+<p>测试document元素更改图片srce</p>
+<img id = "myimage" src="../image/pic_bulboff.gif" onclick = "changeImage()" width="100" height="180">
+</body>
+</html>

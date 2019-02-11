@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+</head>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<style>
+    .class1{
+        background: #444;
+        color: #eee;
+    }
+</style>
+<body>
+<div id="app1">
+    <label for="r1">修改颜色</label>
+    <input type="checkbox" v-model="use" id="r1">
+    <br><br>
+    <div v-bind:class="{'class1': use}">
+        v-bind:class 指令
+    </div>
+</div>
+<h1 style="color: darkmagenta">|||||||||||||||||||||||||||||||||||</h1>
+<div id = "app2">
+    <p>{{message}}</p>
+    <button v-on:click="reverseMessage()">反转</button>
+    <input type = "text" v-model = "message">
+</div>
+<h1 style="color: darkmagenta">|||||||||||||||||||||||||||||||||||</h1>
+<div id = "app3">
+    <lable v-else>来抓我啊。</lable>
+    <lable for="r2" v-if = "seen">你不是抓到我了吗?</lable>
+    <input type="checkbox" v-model="seen" id="r2">
+</div>
+<h1 style="color: darkmagenta">|||||||||||||||||||||||||||||||||||</h1>
+<div id="app4">
+    <div v-if="result">
+        <label>结果为：{{num}}</label>
+    </div>
+    <div v-else>
+        <label>结果为：{{num}}</label>
+    </div>
+    <button v-on:click="changef()">开始</button>
+</div>
+<script>
+    new Vue({
+        el:"#app4",
+        data:{
+            num:0,
+            result:true
+        },
+        methods:{
+            changef : function(){
+                _this = this;
+                var t1 = Math.floor(Math.random()*6);
+                if(t1>3){
+                    _this.result = true;
+                    _this.num = t1+",大";
+                }else{
+                    _this.result = false;
+                    _this.num = t1+",小";
+                }
+            }
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    new Vue({
+        el: '#app1',
+        data:{
+            use: false
+        }
+    });
+
+    new Vue({
+       el:"#app2",
+       data:{
+           message:"runoob1995!"
+       },
+       methods:{
+           reverseMessage : function(){
+               this.message = this.message.split("").reverse().join("")
+           }
+       }
+    });
+
+    new Vue({
+       el:"#app3",
+       data:{
+           seen:false
+       }
+    });
+
+
+</script>
+</body>
