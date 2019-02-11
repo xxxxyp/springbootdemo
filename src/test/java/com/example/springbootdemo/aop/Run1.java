@@ -11,7 +11,7 @@ public class Run1 {
 
     @Test
    public void run1(){
-        aopservice aopservice = new aopservice();
-        aopservice.test1();
+        AopService AopService = new AopService();
+        AopService.test1();
     }
 }

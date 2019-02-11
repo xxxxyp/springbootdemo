@@ -17,7 +17,11 @@ public class ReflexField {
     }
     public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException, SecurityException
     {
+        //forName方式获取
         Class strClass=Class.forName(getThisPackageName(ReflexField.class)+".ReflexVo");
+        //classLoader方式获取
+//        ClassLoader classLoader = ClassLoader.getSystemClassLoader();
+//        Class<?> aClass = classLoader.loadClass(getThisPackageName(ReflexField.class) + ".ReflexVo");
         //获取类的所有声明的字段
         Field[] sField=strClass.getDeclaredFields();
         for (Field field : sField)

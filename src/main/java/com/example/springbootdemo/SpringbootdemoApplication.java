@@ -2,6 +2,7 @@ package com.example.springbootdemo;
 
 import com.github.pagehelper.PageHelper;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -17,6 +18,8 @@ public class SpringbootdemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringbootdemoApplication.class, args);
+//        SpringApplication springApplication = new SpringApplication(SpringbootdemoApplication.class);
+//        Banner banner =
     }
     @Bean
     public PageHelper pageHelper(){

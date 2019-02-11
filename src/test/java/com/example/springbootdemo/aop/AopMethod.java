@@ -1,23 +1,18 @@
 package com.example.springbootdemo.aop;
 
 
-import org.aopalliance.intercept.Joinpoint;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
-import org.springframework.test.context.junit4.SpringRunner;
 
 @Aspect
 @Component
 class AopMethod {
 
-    @Pointcut("execution(com.example.springbootdemo.aop...*.*(..))")
+    @Pointcut("execution(* com.example.springbootdemo.*.*(..))")
     public void pointCut(){}
 
 

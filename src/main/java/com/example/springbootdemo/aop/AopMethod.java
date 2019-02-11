@@ -15,12 +15,12 @@ import org.springframework.stereotype.Component;
 class AopMethod {
 
 
-    @Pointcut("execution(* com.example.springbootdemo.TestService.*.*(..))")
+    @Pointcut("execution(* com.example.springbootdemo.service.*.*(..))")
     public void pointCut(){}
 
     @Before("pointCut()")
     public void dobefore(JoinPoint joinPoint){
-        System.out.println("谁给你的勇气，梁静茹吗？");
+        System.out.println("谁给你的勇气，江一燕吗？");
     }
 
     @After("pointCut()")

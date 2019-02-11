@@ -6,12 +6,8 @@ public class ThreadLocalDemo {
     public static void main(String[] args) {
 
         for(int i =0 ;i<=5;i++){
-            final Thread t = new Thread(){
-                @Override
-                public void run(){
-                    System.out.println("当前线程:"+Thread.currentThread().getName()+",已分配ID:"+ThreadId.get());
-                }
-            };
+            final Thread t = new Thread(() ->
+                    System.out.println("当前线程:"+Thread.currentThread().getName()+",已分配ID:"+ThreadId.get()),"1t");
             t.start();
         }
 

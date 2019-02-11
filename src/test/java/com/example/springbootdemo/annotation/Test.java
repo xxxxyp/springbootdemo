@@ -1,5 +1,8 @@
 package com.example.springbootdemo.annotation;
 
+import com.example.springbootdemo.annotation.bean.Persion;
+import com.example.springbootdemo.annotation.util.AnnotationUtil;
+
 public class Test {
 
     public static void main(String[] args) {

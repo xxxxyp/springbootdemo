@@ -3,7 +3,7 @@ package com.example.springbootdemo.aop;
 import org.springframework.stereotype.Service;
 
 @Service
-public class aopservice {
+public class AopService {
 
     public void test1(){
         System.out.println("迪丽热巴！");
