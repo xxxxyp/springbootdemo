@@ -8,3 +8,9 @@ server:
 spring:
   profiles:
     active: dev
+
+  don:
+    name: 张三
+    age: 18
+    sex: 男
+    info-url: www.baidu.com
